@@ -1,0 +1,83 @@
+body{
+    height: 97.5vh;
+    /* background-image: linear-gradient(white,rgb(21, 7, 126)); */
+    background-image: linear-gradient(white,rgb(191 80 122));
+    /* background-image: linear-gradient(rgb(191 80 122), white); */
+    
+    /* background-image: url(a.jpg) no-repeat center center fixed;
+    background-size: cover; */
+}
+
+h2{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    height: 58px;
+    width: 58px;
+    border: 3px solid white;
+    border-radius: 70px;
+}
+
+
+.container{
+    max-width: 750px;
+    /* background-color: red; */
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 20px;
+    /* margin-top: 5px; */
+    height: 55vh;
+    padding: 33px;
+    /* overflow-y: scroll; */
+    overflow-y: auto;
+    margin-bottom: 23px;
+    /* border-radius: 50px; */
+}
+.message{
+    background-color: rgb(211, 209, 209);
+    font-family: sans-serif;
+    width: 30%;
+    padding: 3px;
+    margin: 17px 12px;
+    margin-left: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.left{
+   float: left;
+   clear: both;
+}
+.right{
+   float: right;
+   clear: both;
+}
+
+#send-container{
+    text-align: center;
+    /* display: block;
+    margin: auto; */
+}
+#messageInp{
+    width:50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 34px;
+    /* margin-top:10px ; */
+}
+.btn{
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+    font-size: 18px;
+    margin-left: 5px;
+    /* width: 9%; */
+    
+}

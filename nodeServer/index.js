@@ -1,0 +1,35 @@
+// const express = require('express');
+// var app= express();
+
+const cors = require('cors');
+//app.use(cors());
+//app.options("*", cors());
+
+const io = require('socket.io')(8000, {
+    cors: {
+      origin: '*',
+    }
+  });
+//io.set('origins', '*:*');
+
+const users= {};
+
+io.on('connection', socket=>{
+    socket.on('new-user-joined', name =>{
+        // new-user-joined => this name is not predefined, we can put any name of  our choice
+        // console.log("New user: ", name)
+
+        users[socket.id] = name;
+        socket.broadcast.emit('user-joined',name);
+        // broadcast.emit => this will send a notification to everyone else except for the user that has joined
+    });
+    
+    socket.on('send', message=>{
+        socket.broadcast.emit('receive', {message: message, name:users[socket.id]});
+    });
+
+    socket.on('disconnect', message=>{
+        socket.broadcast.emit('leave', users[socket.id]);
+        delete users[socket.id];
+    });
+})
