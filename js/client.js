@@ -1,6 +1,6 @@
 // var socket = io('http://127.0.0.1:8000');
 // var socket = io('http://localhost:8000');
-var socket = io("https://chatting-app-hsbt.vercel.app/")
+var socket = io("https://chatting-app-hsbt.vercel.app/");
 
 
 const form= document.getElementById('send-container');
