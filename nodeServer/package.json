@@ -4,11 +4,11 @@
   "description": "This is a node server for our Let's Chit-Chat application.",
   "main": "index.js",
   "engines": {
-    "node": "14.x"
+    "node": "18.13.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodeserver/index.js"
+    "start": "node index.js"
   },
   "author": "Susmita",
   "license": "ISC",
